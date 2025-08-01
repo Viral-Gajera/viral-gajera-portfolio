@@ -97,7 +97,7 @@ export const projects: Project[] = [
   {
     slug: 'glucosesense',
     title: 'GlucoSense',
-    category: 'Team Project',
+    category: 'Personal Project',
     shortDescription: 'A non-invasive glucose monitoring system using machine learning to analyze PPG signals.',
     techStack: ['React.js', 'React Native', 'Electron.js', 'TailwindCSS', 'Flask', 'SQL'],
     githubUrl: 'https://github.com/Viral-Gajera/gluco-sense/',
@@ -127,6 +127,26 @@ export const projects: Project[] = [
     images: ['https://placehold.co/1200x800.png'],
     longDescription: `This project is a detailed frontend implementation of the BookMyShow website. It focuses on replicating the user interface and user experience of browsing movies, viewing details, and the seat selection process. Built with React.js and styled with TailwindCSS, the project consumes a mock movie data API to dynamically render content. It demonstrates strong skills in component-based architecture and responsive design.`
   },
+  {
+    slug: 'freelance-crm',
+    title: 'Business CRM',
+    category: 'Freelance Project',
+    shortDescription: 'A custom CRM solution for a local business to manage customer relationships and sales pipelines.',
+    techStack: ['Next.js', 'Typescript', 'TailwindCSS', 'Firebase'],
+    githubUrl: 'https://github.com/Viral-Gajera',
+    images: ['https://placehold.co/1200x800.png'],
+    longDescription: `This was a freelance project to build a custom Customer Relationship Management (CRM) system. The client needed a tailored solution to track leads, manage contacts, and visualize their sales funnel. The application is built with Next.js for a fast and SEO-friendly experience, with data stored in Firebase Firestore. It includes features like contact management, deal tracking, and a dashboard with key metrics.`
+  },
+    {
+    slug: 'weather-app',
+    title: 'Simple Weather App',
+    category: 'Mini Project',
+    shortDescription: 'A clean weather app that shows the current weather for any city.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Weather API'],
+    githubUrl: 'https://github.com/Viral-Gajera',
+    images: ['https://placehold.co/1200x800.png'],
+    longDescription: `A classic mini-project to practice asynchronous JavaScript and working with third-party APIs. The user can search for a city, and the app will fetch and display the current temperature, weather conditions, and humidity from the OpenWeatherMap API. The interface is simple, clean, and responsive.`
+  }
 ];
 
 export const education: Education[] = [

@@ -24,10 +24,12 @@ export type WorkExperience = {
   description: string[];
 };
 
+export type ProjectCategory = 'Personal Project' | 'Freelance Project' | 'Mini Project';
+
 export type Project = {
   slug: string;
   title: string;
-  category: string;
+  category: ProjectCategory;
   shortDescription: string;
   techStack: string[];
   githubUrl: string;
