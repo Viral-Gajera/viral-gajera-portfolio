@@ -147,17 +147,15 @@ export function ThemeCustomizer() {
     return (
         <div className="flex items-center justify-between">
             <Label htmlFor={variable}>{name}</Label>
-            <div onPointerDown={(e) => e.stopPropagation()}>
-              <Input
-                  id={variable}
-                  type="color"
-                  value={hexColor}
-                  onChange={(e) => {
-                    handleColorChange(variable, e.target.value)
-                  }}
-                  className="w-24 p-1 h-10"
-              />
-            </div>
+            <Input
+                id={variable}
+                type="color"
+                value={hexColor}
+                onChange={(e) => {
+                  handleColorChange(variable, e.target.value)
+                }}
+                className="w-24 p-1 h-10"
+            />
         </div>
     )
   };

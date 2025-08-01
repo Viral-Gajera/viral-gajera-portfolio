@@ -38,7 +38,11 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       onPointerDownOutside={(e) => {
-        if (e.target instanceof HTMLElement && e.target.closest('input[type="color"]')) {
+        // This is the important part:
+        // The `e.target` for a color input is the input element itself.
+        // We prevent the default behavior (closing the dialog) if the click
+        // is on an input of type 'color'.
+        if (e.target instanceof HTMLInputElement && e.target.type === 'color') {
           e.preventDefault();
         }
       }}
