@@ -9,7 +9,7 @@ export function HeroSection() {
     <section id="hero" className="scroll-mt-20">
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="order-2 flex flex-col items-start gap-4 md:order-1">
-          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+          <h1 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
             Hi, I&apos;m {personalData.name}
           </h1>
           <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl">
@@ -44,10 +44,10 @@ export function HeroSection() {
             ))}
           </div>
         </div>
-        <div className="order-1 flex items-center justify-center md:order-2">
-          <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg md:h-80 md:w-80">
+        <div className="order-1 flex items-center justify-center md:justify-end md:order-2">
+          <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-foreground/10 shadow-lg md:h-80 md:w-80">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="/profile-photo.jpg"
               alt={personalData.name}
               fill
               className="object-cover"

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -145,13 +146,15 @@ export function ThemeCustomizer() {
     return (
         <div className="flex items-center justify-between">
             <Label htmlFor={variable}>{name}</Label>
-            <Input
-                id={variable}
-                type="color"
-                value={hexColor}
-                onChange={(e) => handleColorChange(variable, e.target.value)}
-                className="w-24 p-1 h-10"
-            />
+            <div onClick={(e) => e.stopPropagation()}>
+              <Input
+                  id={variable}
+                  type="color"
+                  value={hexColor}
+                  onChange={(e) => handleColorChange(variable, e.target.value)}
+                  className="w-24 p-1 h-10"
+              />
+            </div>
         </div>
     )
   };
@@ -174,7 +177,7 @@ export function ThemeCustomizer() {
           </DialogDescription>
         </DialogHeader>
         <div className="py-4 pr-2 max-h-[450px] overflow-y-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
               <ColorInput name="Background" variable="--background" />
               <ColorInput name="Foreground" variable="--foreground" />
               <ColorInput name="Primary" variable="--primary" />

@@ -13,8 +13,8 @@ export function SectionWrapper({ id, title, icon: Icon, children, className }: S
   return (
     <section id={id} className={cn('scroll-mt-20', className)}>
       <div className="mb-8 flex items-center gap-3">
-        <Icon className="h-8 w-8 text-primary" />
-        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">{title}</h2>
+        {/* <Icon className="h-8 w-8 text-primary" /> */}
+        <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl">{title}</h2>
       </div>
       {children}
     </section>
