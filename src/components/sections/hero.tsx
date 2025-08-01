@@ -29,6 +29,20 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
+           <div className="mt-4 flex gap-4">
+            {personalData.links.map((link) => (
+              <Button asChild key={link.href} variant="outline" size="icon">
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                >
+                  <link.icon className="h-5 w-5" />
+                </Link>
+              </Button>
+            ))}
+          </div>
         </div>
         <div className="order-1 flex items-center justify-center md:order-2">
           <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg md:h-80 md:w-80">
@@ -42,20 +56,6 @@ export function HeroSection() {
             />
           </div>
         </div>
-      </div>
-      <div className="mt-16 flex justify-center gap-4 md:mt-24">
-        {personalData.links.map((link) => (
-          <Button asChild key={link.href} variant="outline" size="icon">
-            <Link
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.label}
-            >
-              <link.icon className="h-5 w-5" />
-            </Link>
-          </Button>
-        ))}
       </div>
     </section>
   );
