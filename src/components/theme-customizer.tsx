@@ -164,7 +164,7 @@ export function ThemeCustomizer() {
           <span className="sr-only">Customize Theme</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-md">
+      <DialogContent className="max-w-xl">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Palette /> Customize Theme
@@ -173,19 +173,21 @@ export function ThemeCustomizer() {
             Adjust the colors to personalize your experience. Your theme is saved automatically.
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-4 py-4">
-            <ColorInput name="Background" variable="--background" />
-            <ColorInput name="Foreground" variable="--foreground" />
-            <ColorInput name="Primary" variable="--primary" />
-            <ColorInput name="Primary Foreground" variable="--primary-foreground" />
-            <ColorInput name="Secondary" variable="--secondary" />
-            <ColorInput name="Accent" variable="--accent" />
-            <ColorInput name="Accent Dark" variable="--accent-dark" />
-            <ColorInput name="Destructive" variable="--destructive" />
-            <ColorInput name="Card" variable="--card" />
-            <ColorInput name="Border" variable="--border" />
-            <ColorInput name="Input" variable="--input" />
-            <ColorInput name="Ring" variable="--ring" />
+        <div className="py-4 pr-2 max-h-[450px] overflow-y-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ColorInput name="Background" variable="--background" />
+              <ColorInput name="Foreground" variable="--foreground" />
+              <ColorInput name="Primary" variable="--primary" />
+              <ColorInput name="Primary Foreground" variable="--primary-foreground" />
+              <ColorInput name="Secondary" variable="--secondary" />
+              <ColorInput name="Accent" variable="--accent" />
+              <ColorInput name="Accent Dark" variable="--accent-dark" />
+              <ColorInput name="Destructive" variable="--destructive" />
+              <ColorInput name="Card" variable="--card" />
+              <ColorInput name="Border" variable="--border" />
+              <ColorInput name="Input" variable="--input" />
+              <ColorInput name="Ring" variable="--ring" />
+            </div>
         </div>
         <Button variant="outline" onClick={resetTheme}>Reset to Default</Button>
       </DialogContent>
