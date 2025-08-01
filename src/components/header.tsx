@@ -46,7 +46,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Code className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">{personalData.name}</span>
+          <span className="font-bold text-lg font-headline font-bold tracking-tighter">{personalData.name}</span>
         </Link>
         <div className="hidden md:flex items-center gap-4">
           <NavLinks />
