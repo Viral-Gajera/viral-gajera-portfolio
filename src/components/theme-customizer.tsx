@@ -118,8 +118,9 @@ export function ThemeCustomizer() {
 
   useEffect(() => {
     if (isMounted) {
+      const root = document.documentElement;
       Object.entries(theme).forEach(([key, value]) => {
-        document.documentElement.style.setProperty(key, value);
+        root.style.setProperty(key, value);
       });
       localStorage.setItem('app-theme', JSON.stringify(theme));
     }
@@ -139,14 +140,14 @@ export function ThemeCustomizer() {
   }
   
   const ColorInput = ({ name, variable }: { name: string; variable: keyof Theme }) => {
-    const hslString = theme[variable];
+    const hslString = theme[variable] || '0 0% 0%';
     const [h, s, l] = hslString.split(' ').map(val => parseFloat(val.replace('%', '')));
     const hexColor = hslToHex(h, s, l);
 
     return (
         <div className="flex items-center justify-between">
             <Label htmlFor={variable}>{name}</Label>
-            <div onClick={(e) => e.stopPropagation()}>
+            <div onPointerDown={(e) => e.stopPropagation()}>
               <Input
                   id={variable}
                   type="color"
