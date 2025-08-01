@@ -21,7 +21,8 @@ import {
   Award,
   GraduationCap,
   Briefcase,
-  Lightbulb
+  Lightbulb,
+  X,
 } from 'lucide-react';
 import { TechIcons } from '@/components/icons';
 
@@ -41,6 +42,7 @@ export const personalData: PersonalData = {
   links: [
     { label: 'LinkedIn', href: 'https://linkedin.com/in/gajera-viral', icon: Linkedin },
     { label: 'GitHub', href: 'https://github.com/Viral-Gajera', icon: Github },
+    { label: 'X', href: 'https://x.com/ViralGajera218', icon: X },
     { label: 'LeetCode', href: 'https://leetcode.com/viral_gajera', icon: Code },
   ],
 };
