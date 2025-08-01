@@ -103,6 +103,34 @@ function hexToHsl(hex: string): string {
     return `${h} ${s}% ${l}%`;
 }
 
+type ColorInputProps = {
+  name: string;
+  variable: keyof Theme;
+  theme: Theme;
+  handleColorChange: (variable: keyof Theme, value: string) => void;
+}
+
+const ColorInput = ({ name, variable, theme, handleColorChange }: ColorInputProps) => {
+  const hslString = theme[variable] || '0 0% 0%';
+  const [h, s, l] = hslString.split(' ').map(val => parseFloat(val.replace('%', '')));
+  const hexColor = hslToHex(h, s, l);
+
+  return (
+      <div className="flex items-center justify-between">
+          <Label htmlFor={variable}>{name}</Label>
+          <Input
+              id={variable}
+              type="color"
+              value={hexColor}
+              onChange={(e) => {
+                handleColorChange(variable, e.target.value)
+              }}
+              className="w-24 p-1 h-10"
+          />
+      </div>
+  )
+};
+
 
 export function ThemeCustomizer() {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
@@ -139,26 +167,6 @@ export function ThemeCustomizer() {
     return null;
   }
   
-  const ColorInput = ({ name, variable }: { name: string; variable: keyof Theme }) => {
-    const hslString = theme[variable] || '0 0% 0%';
-    const [h, s, l] = hslString.split(' ').map(val => parseFloat(val.replace('%', '')));
-    const hexColor = hslToHex(h, s, l);
-
-    return (
-        <div className="flex items-center justify-between">
-            <Label htmlFor={variable}>{name}</Label>
-            <Input
-                id={variable}
-                type="color"
-                value={hexColor}
-                onChange={(e) => {
-                  handleColorChange(variable, e.target.value)
-                }}
-                className="w-24 p-1 h-10"
-            />
-        </div>
-    )
-  };
 
   return (
     <Dialog>
@@ -179,18 +187,18 @@ export function ThemeCustomizer() {
         </DialogHeader>
         <div className="py-4 pr-2 max-h-[450px] overflow-y-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-              <ColorInput name="Background" variable="--background" />
-              <ColorInput name="Foreground" variable="--foreground" />
-              <ColorInput name="Primary" variable="--primary" />
-              <ColorInput name="Primary Foreground" variable="--primary-foreground" />
-              <ColorInput name="Secondary" variable="--secondary" />
-              <ColorInput name="Accent" variable="--accent" />
-              <ColorInput name="Accent Dark" variable="--accent-dark" />
-              <ColorInput name="Destructive" variable="--destructive" />
-              <ColorInput name="Card" variable="--card" />
-              <ColorInput name="Border" variable="--border" />
-              <ColorInput name="Input" variable="--input" />
-              <ColorInput name="Ring" variable="--ring" />
+              <ColorInput name="Background" variable="--background" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Foreground" variable="--foreground" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Primary" variable="--primary" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Primary Foreground" variable="--primary-foreground" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Secondary" variable="--secondary" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Accent" variable="--accent" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Accent Dark" variable="--accent-dark" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Destructive" variable="--destructive" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Card" variable="--card" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Border" variable="--border" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Input" variable="--input" theme={theme} handleColorChange={handleColorChange} />
+              <ColorInput name="Ring" variable="--ring" theme={theme} handleColorChange={handleColorChange} />
             </div>
         </div>
         <Button variant="outline" onClick={resetTheme}>Reset to Default</Button>
