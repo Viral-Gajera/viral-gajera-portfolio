@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import type { ProjectCategory } from '@/types';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const projectCategories: ProjectCategory[] = ['Personal Project', 'Freelance Project', 'Mini Project'];
 
@@ -89,9 +90,3 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
-
-// You might need to install framer-motion: npm install framer-motion
-// For this example, I'll add it as a comment but you'd need to run the install command.
-// I've also wrapped the content in motion divs for smooth transitions.
-// You'll need to import them:
-import { motion, AnimatePresence } from 'framer-motion';

@@ -29,7 +29,7 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
-           <div className="mt-4 flex gap-4">
+          <div className="mt-4 flex gap-4">
             {personalData.links.map((link) => (
               <Button asChild key={link.href} variant="outline" size="icon">
                 <Link
@@ -45,12 +45,12 @@ export function HeroSection() {
           </div>
         </div>
         <div className="order-1 flex items-center justify-center md:justify-end md:order-2">
-          <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-foreground/10 shadow-lg md:h-80 md:w-80">
+          <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-foreground/20 shadow-lg md:h-80 md:w-80 bg-primary">
             <Image
-              src="/profile-photo.jpg"
+              src="/profile-picture-without-bg.png"
               alt={personalData.name}
               fill
-              className="object-cover"
+              className="object-cover "
               priority
               data-ai-hint="profile picture"
             />

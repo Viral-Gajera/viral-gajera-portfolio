@@ -152,7 +152,9 @@ export function ThemeCustomizer() {
                   id={variable}
                   type="color"
                   value={hexColor}
-                  onChange={(e) => handleColorChange(variable, e.target.value)}
+                  onChange={(e) => {
+                    handleColorChange(variable, e.target.value)
+                  }}
                   className="w-24 p-1 h-10"
               />
             </div>
