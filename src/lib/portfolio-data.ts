@@ -118,6 +118,46 @@ export const workExperience: WorkExperience[] = [
 
 export const projects: Project[] = [
   {
+    slug: "justpark",
+    title: "Justpark",
+    category: "Personal Project",
+    shortDescription: "Parking Spot Management System with Real-Time Detection",
+    techStack: [
+      "React.js",
+      "TailwindCSS",
+      "Node.js",
+      "Express.js",
+      "SQL",
+      "ReactNative",
+      "Arduino",
+    ],
+    githubUrl: "https://github.com/Viral-Gajera/justpark",
+    liveUrl: "https://github.com/Viral-Gajera/justpark",
+    images: [
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/1.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/2.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/3.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/4.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/5.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/6.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/7.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/8.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/9.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/10.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/11.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/12.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/13.png?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/14.jpg?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/15.jpg?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/16.jpg?raw=true",
+      "https://github.com/Viral-Gajera/justpark/raw/main/images/17.jpg?raw=true",
+    ],
+    longDescription: `JustPark is a parking spot management system designed to optimize parking space utilization. The system combines real-time spot detection with user-friendly interfaces to create a seamless experience for both parking space providers and users.
+    Key Features:
+    Real-Time Spot Detection, Integrated Map for nearby parking spot searching, booking, etc., Enhances efficiency by dynamically updating spot availability., Mobile & Web Application., Utilizes Arduino with HC05 and laser sensors for accurate and real-time parking spot detection.
+    `,
+  },
+  {
     slug: "spotify",
     title: "Spotify",
     category: "Personal Project",
@@ -173,7 +213,7 @@ export const projects: Project[] = [
   {
     slug: "tasky-app",
     title: "Tasky Application",
-    category: "Personal Project",
+    category: "Mini Project",
     shortDescription:
       "A modern task management application to organize and track daily tasks and to-dos.",
     techStack: ["React.js", "Node.js", "Express", "MongoDB", "TailwindCSS"],
@@ -187,7 +227,7 @@ export const projects: Project[] = [
   {
     slug: "bookmyshow-clone",
     title: "BookMyShow Frontend",
-    category: "Personal Project",
+    category: "Mini Project",
     shortDescription:
       "A responsive frontend clone of the popular movie ticket booking website, BookMyShow.",
     techStack: ["React.js", "TailwindCSS", "API Integration"],
@@ -205,17 +245,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Viral-Gajera",
     images: ["https://placehold.co/1200x800.png"],
     longDescription: `This was a freelance project to build a custom Customer Relationship Management (CRM) system. The client needed a tailored solution to track leads, manage contacts, and visualize their sales funnel. The application is built with Next.js for a fast and SEO-friendly experience, with data stored in Firebase Firestore. It includes features like contact management, deal tracking, and a dashboard with key metrics.`,
-  },
-  {
-    slug: "weather-app",
-    title: "Simple Weather App",
-    category: "Mini Project",
-    shortDescription:
-      "A clean weather app that shows the current weather for any city.",
-    techStack: ["HTML", "CSS", "JavaScript", "Weather API"],
-    githubUrl: "https://github.com/Viral-Gajera",
-    images: ["https://placehold.co/1200x800.png"],
-    longDescription: `A classic mini-project to practice asynchronous JavaScript and working with third-party APIs. The user can search for a city, and the app will fetch and display the current temperature, weather conditions, and humidity from the OpenWeatherMap API. The interface is simple, clean, and responsive.`,
   },
 ];
 
