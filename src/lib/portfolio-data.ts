@@ -220,20 +220,20 @@ export const certifications: Certification[] = [
   { 
     title: 'Database Programming with SQL', 
     issuer: 'Oracle Certified',
-    verificationUrl: '#',
-    imageUrl: 'https://placehold.co/1200x800.png' 
+    verificationUrl: undefined,
+    imageUrl: 'https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/sql_oracle_certificate.png?raw=true' 
   },
   { 
     title: 'Angular Developer', 
     issuer: 'Infosys Certified',
-    verificationUrl: '#',
-    imageUrl: 'https://placehold.co/1200x800.png'
+    verificationUrl: undefined,
+    imageUrl: 'https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/angular_infosys_certificate.png?raw=true'
   },
   { 
     title: 'The Complete JavaScript Course', 
     issuer: 'Udemy',
-    verificationUrl: '#',
-    imageUrl: 'https://placehold.co/1200x800.png'
+    verificationUrl: undefined,
+    imageUrl: 'https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/javascript_udemy_course.png?raw=true'
   },
 ];
 
