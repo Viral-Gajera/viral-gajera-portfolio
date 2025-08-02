@@ -28,7 +28,7 @@ export function ProjectsSection() {
             <TabsTrigger key={category} value={category}>{category}</TabsTrigger>
           ))}
         </TabsList>
-        
+
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -42,33 +42,35 @@ export function ProjectsSection() {
                 {filteredProjects.length > 0 ? (
                   filteredProjects.map((project) => (
                     <Card key={project.slug} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-                      <CardHeader>
-                        <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow">
-                        <div className="aspect-video overflow-hidden rounded-md mb-4 border">
-                          <Image
-                            src={project.images[0]}
-                            alt={project.title}
-                            width={400}
-                            height={225}
-                            className="w-full h-full object-cover"
-                            data-ai-hint="project showcase"
-                          />
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-4">{project.shortDescription}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {project.techStack.map((tech) => (
-                            <Badge key={tech} variant="secondary">{tech}</Badge>
-                          ))}
-                        </div>
-                      </CardContent>
+                      <Link href={`/projects/${project.slug}`}>
+                        <CardHeader>
+                          <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                          <div className="aspect-video overflow-hidden rounded-md mb-4 border">
+                            <Image
+                              src={project.images[0]}
+                              alt={project.title}
+                              width={400}
+                              height={225}
+                              className="w-full h-full object-cover"
+                              data-ai-hint="project showcase"
+                            />
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-4">{project.shortDescription}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {project.techStack.map((tech) => (
+                              <Badge key={tech} variant="secondary">{tech}</Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Link>
                       <CardFooter className="flex gap-2">
-                        <Button asChild size="sm" variant="outline" className="flex-1">
-                          <Link href={`/projects/${project.slug}`}>
+                        <Button asChild size="sm" className="flex-1">
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Details
-                          </Link>
+                            Live Demo
+                          </a>
                         </Button>
                         <Button asChild size="sm" variant="outline" className="flex-1">
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
