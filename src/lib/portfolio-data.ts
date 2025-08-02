@@ -158,9 +158,13 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Viral-Gajera/gluco-sense/",
     liveUrl: "https://github.com/Viral-Gajera/gluco-sense/",
     images: [
-      "https://placehold.co/1200x800.png",
-      "https://placehold.co/1200x800.png",
-      "https://placehold.co/1200x800.png",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-1.jpg?raw=true",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-2.jpg?raw=true",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-3.jpg?raw=true",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-3.jpg?raw=true",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-4.jpg?raw=true",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-5.jpg?raw=true",
+      "https://github.com/Viral-Gajera/gluco-sense-images/raw/main/img-6.jpg?raw=true",
     ],
     longDescription: `GlucoSense is a groundbreaking ML-based system designed to measure glucose levels non-invasively, specifically for diabetic patients. The project involved a comprehensive development cycle, from hardware integration to software application development.
     We integrated a PPG (Photoplethysmography) sensor to capture blood volume changes and a Bluetooth module for wireless data transmission, achieving a stable 16Hz data transfer frequency. The backend, built with Flask, processes this data using a trained machine learning model to predict glucose levels.

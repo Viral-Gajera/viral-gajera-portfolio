@@ -29,7 +29,7 @@ export default function ProjectGallery({ images }: { images: string[] }) {
           alt="Main project image"
           width={1200}
           height={800}
-          className="w-full h-auto cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
+          className="w-full max-h-[600px] h-auto cursor-pointer object-cover object-center transition-transform duration-300 hover:scale-105"
           onClick={() => setSelectedImage(images[0])}
           priority
           data-ai-hint="project screenshot"
@@ -61,7 +61,7 @@ export default function ProjectGallery({ images }: { images: string[] }) {
               opts={{
                 align: "start",
                 loop: true,
-                initial: images.findIndex(img => img === selectedImage)
+                // initial: images.findIndex(img => img === selectedImage)
               }}
               className="w-full"
             >
