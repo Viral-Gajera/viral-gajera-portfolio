@@ -21,8 +21,7 @@ import {
   Award,
   GraduationCap,
   Briefcase,
-  Lightbulb,
-  Twitter,
+  Lightbulb
 } from 'lucide-react';
 import { TechIcons } from '@/components/icons';
 
@@ -42,12 +41,23 @@ export const personalData: PersonalData = {
   links: [
     { label: 'LinkedIn', href: 'https://linkedin.com/in/gajera-viral', icon: Linkedin },
     { label: 'GitHub', href: 'https://github.com/Viral-Gajera', icon: Github },
-    { label: 'X', href: 'https://x.com/ViralGajera218', icon: Twitter },
-    { label: 'LeetCode', href: 'https://leetcode.com/viral_gajera', icon: TechIcons.LeetCode },
+    { label: 'X', href: 'https://x.com/ViralGajera218', icon: TechIcons.Twitter },
+    { label: 'LeetCode', href: 'https://leetcode.com/u/viral_gajera/', icon: TechIcons.LeetCode },
   ],
 };
 
 export const workExperience: WorkExperience[] = [
+  {
+    company: 'Tata Consultancy Services',
+    role: 'Software Engineer',
+    duration: 'January 2025 - Present',
+    location: 'Gandhinagar, Gujarat, India',
+    description: [
+      'Developing and enhancing Brandshub, a bespoke B2B software for Marks & Spencer, to streamline issue and ticket resolution with their vendors.',
+      'Utilizing Next.js and TailwindCSS to build a modern, performant, and user-friendly interface for a seamless client experience.',
+      'Collaborating in an agile environment to translate client requirements into robust features, improving efficiency and communication between M&S and its partners.'
+    ],
+  },
   {
     company: 'ThoughtI, Inc',
     role: 'Full Stack Developer',

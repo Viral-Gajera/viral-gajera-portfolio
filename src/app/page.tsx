@@ -13,7 +13,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
-        <div className="container mx-auto px-4 py-16 sm:py-24">
+        <div className="container mx-auto px-4 py-16 sm:py-32">
           <div className="flex flex-col gap-24 md:gap-32">
             <HeroSection />
             <ExperienceSection />
