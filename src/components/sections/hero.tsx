@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { personalData } from '@/lib/portfolio-data';
@@ -23,10 +25,15 @@ export function HeroSection() {
             <Button asChild size="lg">
               <Link href="#projects">My Work</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="#experience">
+            <Button asChild variant="outline" size="lg" className='cursor-pointer' onClick={() => {
+              let a = document.createElement('a');
+              a.href = "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/ViralGajera.pdf";
+              a.target = "_blank"
+              a.click()
+            }} >
+              <span>
                 My Resume <ArrowDown className="ml-2 h-4 w-4" />
-              </Link>
+              </span>
             </Button>
           </div>
           <div className="mt-4 flex gap-4">

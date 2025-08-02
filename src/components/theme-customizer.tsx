@@ -182,7 +182,7 @@ export function ThemeCustomizer() {
             <Palette /> Customize Theme
           </DialogTitle>
           <DialogDescription>
-            Adjust the colors to personalize your experience. Your theme is saved automatically.
+            {/* Adjust the colors to personalize your experience. Your theme is saved automatically. */}
           </DialogDescription>
         </DialogHeader>
         <div className="py-4 pr-2 max-h-[450px] overflow-y-auto">

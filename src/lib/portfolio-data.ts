@@ -51,17 +51,17 @@ export const workExperience: WorkExperience[] = [
   {
     company: 'ThoughtI, Inc',
     role: 'Full Stack Developer',
-    duration: 'March 2024 – June 2024',
+    duration: 'March 2024 - June 2024',
     location: 'Remote (United States)',
     description: [
-      "Worked in ‘Neurex’, Healthcare Software to boost efficiency and achieve operational excellence.",
+      "Worked in 'Neurex', Healthcare Software to boost efficiency and achieve operational excellence.",
       "Utilized React.js, Redux, Node.js, and TailwindCSS to build efficient healthcare management software."
     ],
   },
   {
     company: 'Infosys',
     role: 'Angular Developer Intern',
-    duration: 'April 2024 – June 2024',
+    duration: 'April 2024 - June 2024',
     location: 'Remote (Bangalore)',
     description: [
       "Team Lead & Top Contributor, overseeing and contributing to the application's development progress.",
@@ -73,7 +73,7 @@ export const workExperience: WorkExperience[] = [
   {
     company: 'Analytics Valley Technology',
     role: 'React.js Developer Intern',
-    duration: 'May 2023 – August 2023',
+    duration: 'May 2023 - August 2023',
     location: 'Remote (Bangalore)',
     description: [
       "Developed Analytics Valley Website from scratch with 100% individual contribution.",
@@ -84,7 +84,7 @@ export const workExperience: WorkExperience[] = [
   {
     company: 'DevTown Community',
     role: 'MERN Stack Developer Intern',
-    duration: 'October 2022 – January 2023',
+    duration: 'October 2022 - January 2023',
     location: 'Remote (Bangalore)',
     description: [
       "Mentored by an Infosys engineer, gaining hands-on experience in scalable web app development.",
@@ -153,19 +153,19 @@ export const education: Education[] = [
   {
     institution: 'Marwadi University, Rajkot',
     degree: 'B.Tech in Computer Engineering',
-    duration: 'April 2020 – May 2024',
+    duration: 'April 2020 - May 2024',
     grade: 'CGPA: 9.8/10',
   },
   {
     institution: 'The School of Science, Rajkot',
     degree: 'XII (HSC)',
-    duration: 'April 2018 – March 2020',
+    duration: 'April 2018 - March 2020',
     grade: 'Percentile: 98.70/100',
   },
   {
     institution: 'Noble School, Rajkot',
     degree: 'X (SSC)',
-    duration: 'April 2016 – March 2018',
+    duration: 'April 2016 - March 2018',
     grade: 'Percentile: 99.17/100',
   },
 ];
@@ -190,7 +190,7 @@ export const skills: Skill[] = [
 ];
 
 export const achievements: Achievement[] = [
-  { description: 'Secured Government of Gujarat funding for GlucoSense – Non-Invasive Glucose Monitoring System.' },
+  { description: 'Secured Government of Gujarat funding for GlucoSense - Non-Invasive Glucose Monitoring System.' },
   { description: 'Top-ranked Computer Engineering graduate at Marwadi University with a 9.86 CGPA.' },
   { description: 'Finalist (Top 25) out of 4335 teams in the L&T Technology Services Hackathon, 6th Edition.' },
   { description: 'Achieved a global ranking under 740,000 on LeetCode.' },
