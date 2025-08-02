@@ -180,24 +180,33 @@ export const education: Education[] = [
   },
 ];
 
-export const skills: Skill[] = [
-  { name: 'React.js', icon: TechIcons.React },
-  { name: 'Next.js', icon: TechIcons.Nextjs },
-  { name: 'Node.js', icon: TechIcons.Nodejs },
-  { name: 'Angular', icon: TechIcons.Angular },
-  { name: 'Redux', icon: TechIcons.Redux },
-  { name: 'TypeScript', icon: TechIcons.Typescript },
-  { name: 'JavaScript', icon: TechIcons.Javascript },
-  { name: 'TailwindCSS', icon: TechIcons.Tailwind },
-  { name: 'MongoDB', icon: TechIcons.Mongodb },
-  { name: 'SQL', icon: TechIcons.Database },
-  { name: 'HTML', icon: TechIcons.Html5 },
-  { name: 'CSS', icon: TechIcons.Css3 },
-  { name: 'Java', icon: TechIcons.Java },
-  { name: 'Git', icon: TechIcons.Git },
-  { name: 'GitHub', icon: Github },
-  { name: 'Figma', icon: TechIcons.Figma },
-];
+export const skills = {
+  "Frameworks & Libraries": [
+    { name: "React.js & Next.js", level: 95 },
+    { name: "Node.js & Express", level: 90 },
+    { name: "Tailwind CSS", level: 95 },
+    { name: "Angular (Basic)", level: 80 },
+  ],
+  "Languages": [
+    { name: "JavaScript & TypeScript", level: 95 },
+    { name: "Java", level: 85 },
+    { name: "HTML5 & CSS3", level: 98 },
+    { name: "SQL", level: 80 },
+  ],
+  "Databases": [
+    { name: "MySQL", level: 85 },
+    { name: "MongoDB", level: 75 },
+
+  ],
+  "DevOps & Cloud Platform": [
+    { name: "Docker", level: 80 },
+    { name: "Google Cloud Platform", level: 70 },
+  ],
+  "Tools": [
+    { name: "Git & GitHub", level: 95 },
+    { name: "Figma", level: 95 },
+  ]
+};
 
 export const achievements: Achievement[] = [
   { description: 'Secured Government of Gujarat funding for GlucoSense - Non-Invasive Glucose Monitoring System.' },
