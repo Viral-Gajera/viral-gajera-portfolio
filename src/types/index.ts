@@ -57,4 +57,6 @@ export type Achievement = {
 export type Certification = {
   title: string;
   issuer: string;
+  verificationUrl?: string;
+  imageUrl?: string;
 };

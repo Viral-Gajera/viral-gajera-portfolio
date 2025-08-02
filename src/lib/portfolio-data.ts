@@ -21,7 +21,8 @@ import {
   Award,
   GraduationCap,
   Briefcase,
-  Lightbulb
+  Lightbulb,
+  Twitter,
 } from 'lucide-react';
 import { TechIcons } from '@/components/icons';
 
@@ -216,9 +217,24 @@ export const achievements: Achievement[] = [
 ];
 
 export const certifications: Certification[] = [
-  { title: 'Database Programming with SQL', issuer: 'Oracle Certified' },
-  { title: 'Angular Developer', issuer: 'Infosys Certified' },
-  { title: 'The Complete JavaScript Course', issuer: 'Udemy' },
+  { 
+    title: 'Database Programming with SQL', 
+    issuer: 'Oracle Certified',
+    verificationUrl: '#',
+    imageUrl: 'https://placehold.co/1200x800.png' 
+  },
+  { 
+    title: 'Angular Developer', 
+    issuer: 'Infosys Certified',
+    verificationUrl: '#',
+    imageUrl: 'https://placehold.co/1200x800.png'
+  },
+  { 
+    title: 'The Complete JavaScript Course', 
+    issuer: 'Udemy',
+    verificationUrl: '#',
+    imageUrl: 'https://placehold.co/1200x800.png'
+  },
 ];
 
 
