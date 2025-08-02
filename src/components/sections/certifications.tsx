@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -6,7 +7,7 @@ import { certifications, sectionIcons } from '@/lib/portfolio-data';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { BadgeCheck, ExternalLink, Eye } from 'lucide-react';
 
 export function CertificationsSection() {
@@ -61,6 +62,7 @@ export function CertificationsSection() {
 
       <Dialog open={!!selectedImage} onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}>
         <DialogContent className="max-w-4xl p-2 sm:p-4">
+           <DialogTitle className="sr-only">Certificate Image</DialogTitle>
            <div className="w-full flex items-center justify-center">
                <Image
                   src={selectedImage || ''}

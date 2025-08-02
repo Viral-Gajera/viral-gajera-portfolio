@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -5,6 +6,7 @@ import Image from 'next/image';
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
 } from '@/components/ui/dialog';
 import {
   Carousel,
@@ -54,6 +56,7 @@ export default function ProjectGallery({ images }: { images: string[] }) {
 
       <Dialog open={!!selectedImage} onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}>
         <DialogContent className="max-w-5xl p-2 sm:p-4">
+           <DialogTitle className="sr-only">Project Image Gallery</DialogTitle>
            <Carousel
               opts={{
                 align: "start",
