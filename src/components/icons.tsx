@@ -134,6 +134,18 @@ const Figma = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const LeetCode = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 5.851l5.717 5.717 5.717-5.717L13.483 0zm-2.866 2.867-5.717 5.717 5.717 5.717 5.717-5.717-5.717-5.717zM0 13.483l5.851 5.405 5.717-5.717-5.717-5.717L0 13.483zm10.617 0-5.717 5.717 5.717 5.717 5.717-5.717-5.717-5.717z"></path>
+  </svg>
+);
+
+
 export const TechIcons = {
   React,
   Nextjs,
@@ -149,5 +161,6 @@ export const TechIcons = {
   Css3,
   Java,
   Git,
-  Figma
+  Figma,
+  LeetCode
 };

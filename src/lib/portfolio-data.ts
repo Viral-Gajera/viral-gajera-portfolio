@@ -43,7 +43,7 @@ export const personalData: PersonalData = {
     { label: 'LinkedIn', href: 'https://linkedin.com/in/gajera-viral', icon: Linkedin },
     { label: 'GitHub', href: 'https://github.com/Viral-Gajera', icon: Github },
     { label: 'X', href: 'https://x.com/ViralGajera218', icon: Twitter },
-    { label: 'LeetCode', href: 'https://leetcode.com/viral_gajera', icon: Code },
+    { label: 'LeetCode', href: 'https://leetcode.com/viral_gajera', icon: TechIcons.LeetCode },
   ],
 };
 
