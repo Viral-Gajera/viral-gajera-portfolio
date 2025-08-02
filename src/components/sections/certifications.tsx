@@ -64,13 +64,15 @@ export function CertificationsSection() {
         <DialogContent className="max-w-4xl p-2 sm:p-4">
            <DialogTitle className="sr-only">Certificate Image</DialogTitle>
            <div className="w-full flex items-center justify-center">
-               <Image
-                  src={selectedImage || ''}
+              {selectedImage && (
+                <Image
+                  src={selectedImage}
                   alt="Expanded certificate image"
                   width={1200}
                   height={800}
                   className="w-auto h-auto max-w-full max-h-[85vh] object-contain rounded-lg"
                 />
+              )}
             </div>
         </DialogContent>
       </Dialog>
