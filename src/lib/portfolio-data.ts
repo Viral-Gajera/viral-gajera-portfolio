@@ -214,7 +214,7 @@ export const projects: Project[] = [
     slug: "step-campus",
     title: "Step Campus",
     category: "Mini Project",
-    shortDescription: "A platform designed to help you master web automation with hands-on practice. It provides a rich set of UI components specifically created for testing and perfecting your Selenium scripts.",
+    shortDescription: "A platform designed to help you master web automation with hands-on practice.",
     techStack: ["Next.js", "React", "TailwindCss", "ShadCn Ui"],
     githubUrl: "https://github.com/Viral-Gajera/step-campus",
     liveUrl: "https://step-campus.vercel.app/",
