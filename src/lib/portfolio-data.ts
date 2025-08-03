@@ -211,6 +211,24 @@ export const projects: Project[] = [
     The user interface was developed across multiple platforms: a React.js web app for easy access, a React Native mobile app for on-the-go monitoring, and an Electron.js desktop application for comprehensive data analysis. This full-stack approach ensured a seamless user experience across devices. The project was recognized with funding from the Government of Gujarat, highlighting its innovation and potential impact.`,
   },
   {
+    slug: "step-campus",
+    title: "Step Campus",
+    category: "Mini Project",
+    shortDescription: "A platform designed to help you master web automation with hands-on practice. It provides a rich set of UI components specifically created for testing and perfecting your Selenium scripts.",
+    techStack: ["Next.js", "React", "TailwindCss", "ShadCn Ui"],
+    githubUrl: "https://github.com/Viral-Gajera/step-campus",
+    liveUrl: "https://step-campus.vercel.app/",
+    images: [
+            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/1.png",
+            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/2.png",
+            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/3.png",
+            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/4.png",
+            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/5.png",
+            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/6.png"
+          ],
+    longDescription: "Step Campus is a platform designed to help you master web automation with hands-on practice. It provides a rich set of UI components specifically created for testing and perfecting your Selenium scripts.\n\nKey Features:\n\n- Hands-on practice with real UI components\n- Rich set of diverse UI elements for comprehensive testing\n- Ideal for testing and perfecting your Selenium scripts"
+  },
+  {
     slug: "tasky-app",
     title: "Tasky Application",
     category: "Mini Project",
