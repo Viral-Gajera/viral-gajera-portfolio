@@ -52,8 +52,8 @@ export default function ProjectPage({ params }: PageProps) {
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16 sm:py-24">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between">
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl mb-2">
+            <div className="flex items-center justify-between mb-3">
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
                 {project.title}
               </h1>
               <Button variant={"outline"} onClick={() => router.back()}>

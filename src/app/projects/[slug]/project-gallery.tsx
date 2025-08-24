@@ -73,7 +73,7 @@ export default function ProjectGallery({ images }: { images: string[] }) {
             >
               <CarouselContent>
                 {carouselImages().map((image, index) => (
-                  <CarouselItem key={index}>
+                  <CarouselItem key={index} className="flex items-center" >
                     <div className="aspect-video w-full flex items-center justify-center">
                        <Image
                           src={image}
