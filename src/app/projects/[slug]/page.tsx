@@ -61,7 +61,13 @@ export default function ProjectPage({ params }: PageProps) {
                 Back
               </Button>
             </div>
-            <p className="text-muted-foreground mb-8">{project.category}</p>
+             <div className="flex flex-wrap gap-2 mb-8">
+                {project.category.map((cat) => (
+                  <Badge key={cat} variant="default" className="text-sm">
+                    {cat}
+                  </Badge>
+                ))}
+              </div>
 
             <ProjectGallery images={project.images} />
 

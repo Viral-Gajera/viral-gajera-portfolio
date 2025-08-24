@@ -120,7 +120,7 @@ export const projects: Project[] = [
   {
     slug: "justpark",
     title: "Justpark",
-    category: "Personal Project",
+    category: ["Personal Project", "Web Application", "Mobile Application"],
     shortDescription: "Parking Spot Management System with Real-Time Detection",
     techStack: [
       "React.js",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
   {
     slug: "spotify",
     title: "Spotify",
-    category: "Personal Project",
+    category: ["Personal Project", "Web Application"],
     shortDescription:
       "A full-stack Spotify clone with music streaming, user auth, uploads, playlists, and a polished UI like the original.",
     techStack: ["React.js", "TailwindCSS", "Node.js", "Express.js", "SQL"],
@@ -184,7 +184,7 @@ export const projects: Project[] = [
   {
     slug: "glucosesense",
     title: "GlucoSense",
-    category: "Personal Project",
+    category: ["Personal Project", "Web Application", "Mobile Application", "Ai/ML Project"],
     shortDescription:
       "A non-invasive glucose monitoring system using machine learning to analyze PPG signals.",
     techStack: [
@@ -213,7 +213,7 @@ export const projects: Project[] = [
   {
     slug: "step-campus",
     title: "Step Campus",
-    category: "Mini Project",
+    category: ["Mini Project", "Web Application"],
     shortDescription: "A platform designed to help you master web automation with hands-on practice.",
     techStack: ["Next.js", "React", "TailwindCss", "ShadCn Ui"],
     githubUrl: "https://github.com/Viral-Gajera/step-campus",
@@ -231,7 +231,7 @@ export const projects: Project[] = [
   {
     slug: "tasky-app",
     title: "Tasky Application",
-    category: "Mini Project",
+    category: ["Mini Project", "Web Application"],
     shortDescription:
       "A modern task management application to organize and track daily tasks and to-dos.",
     techStack: ["React.js", "Node.js", "Express", "MongoDB", "TailwindCSS"],
@@ -245,7 +245,7 @@ export const projects: Project[] = [
   {
     slug: "bookmyshow-clone",
     title: "BookMyShow Frontend",
-    category: "Mini Project",
+    category: ["Mini Project", "Web Application"],
     shortDescription:
       "A responsive frontend clone of the popular movie ticket booking website, BookMyShow.",
     techStack: ["React.js", "TailwindCSS", "API Integration"],
@@ -256,7 +256,7 @@ export const projects: Project[] = [
   {
     slug: "freelance-crm",
     title: "Business CRM",
-    category: "Freelance Project",
+    category: ["Freelance Project", "Web Application"],
     shortDescription:
       "A custom CRM solution for a local business to manage customer relationships and sales pipelines.",
     techStack: ["Next.js", "Typescript", "TailwindCSS", "Firebase"],
@@ -334,14 +334,14 @@ export const certifications: Certification[] = [
   {
     title: "Azure Fundamental",
     issuer: "Microsoft Certified",
-    verificationUrl: undefined,
+    verificationUrl: "https://www.credly.com/badges/your-badge-id",
     imageUrl:
       "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/azure_fundamental.jpeg?raw=true",
   },
   {
     title: "Database Programming with SQL",
     issuer: "Oracle Certified",
-    verificationUrl: undefined,
+    verificationUrl: "https://www.credly.com/badges/your-badge-id",
     imageUrl:
       "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/sql_oracle_certificate.png?raw=true",
   },
@@ -355,7 +355,7 @@ export const certifications: Certification[] = [
   {
     title: "The Complete JavaScript Course",
     issuer: "Udemy",
-    verificationUrl: undefined,
+    verificationUrl: "https://www.udemy.com/certificate/your-cert-id/",
     imageUrl:
       "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/javascript_udemy_course.png?raw=true",
   },
