@@ -332,6 +332,13 @@ export const achievements: Achievement[] = [
 
 export const certifications: Certification[] = [
   {
+    title: "Azure Fundamental",
+    issuer: "Microsoft Certified",
+    verificationUrl: undefined,
+    imageUrl:
+      "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/azure_fundamental.jpeg?raw=true",
+  },
+  {
     title: "Database Programming with SQL",
     issuer: "Oracle Certified",
     verificationUrl: undefined,

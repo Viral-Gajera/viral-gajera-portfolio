@@ -22,8 +22,8 @@ export function CertificationsSection() {
               <li key={index} className="flex flex-col sm:flex-row items-start gap-4">
                 <BadgeCheck className="mt-1 h-8 w-8 flex-shrink-0 text-primary" />
                 <div className="flex-grow">
-                  <h4 className="font-semibold">{cert.title}</h4>
-                  <p className="text-sm text-muted-foreground mb-2">{cert.issuer}</p>
+                  <p className="text-xs font-semibold text-muted-foreground">{cert.issuer},</p>
+                  <h4 className="font-semibold mb-2">{cert.title}</h4>
                   <div className="flex items-center gap-4">
                     {cert.verificationUrl && (
                       <Button asChild variant="outline" size="sm">
@@ -63,7 +63,7 @@ export function CertificationsSection() {
       <Dialog open={!!selectedImage} onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}>
         <DialogContent className="max-w-4xl p-2 sm:p-4">
            <DialogTitle className="sr-only">Certificate Image</DialogTitle>
-           <div className="w-full flex items-center justify-center">
+           <div className="w-full flex items-center justify-center min-h-10">
               {selectedImage && (
                 <Image
                   src={selectedImage}
