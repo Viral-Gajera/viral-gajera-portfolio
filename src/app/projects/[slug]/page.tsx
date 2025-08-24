@@ -1,54 +1,74 @@
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import { projects } from '@/lib/portfolio-data';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
-import ProjectGallery from './project-gallery';
+"use client";
 
-export async function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
-}
+import { notFound } from "next/navigation";
+import { projects } from "@/lib/portfolio-data";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink, ArrowLeft } from "lucide-react";
+import ProjectGallery from "./project-gallery";
+import { useRouter } from "next/navigation";
+import { use, useEffect } from "react";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
-  if (!project) {
-    return {
-      title: 'Project Not Found',
-    };
-  }
-  return {
-    title: `${project.title} | Project Details`,
-    description: project.shortDescription,
-  };
-}
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default function ProjectPage({ params }: PageProps) {
+  const router = useRouter();
+  const { slug } = use(params);
+  const project = projects.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (project) {
+      document.title = `${project.title} | Project Details`;
+
+      const metaDescription = document.querySelector(
+        "meta[name='description']"
+      );
+      if (metaDescription) {
+        metaDescription.setAttribute("content", project.shortDescription);
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "description";
+        meta.content = project.shortDescription;
+        document.head.appendChild(meta);
+      }
+    } else {
+      document.title = "Project Not Found";
+    }
+  }, [project]);
 
   if (!project) {
     notFound();
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min`-h-screen flex-col">
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16 sm:py-24">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl mb-2">{project.title}</h1>
-            <p className="text-lg text-muted-foreground mb-8">{project.category}</p>
+            <div className="flex items-center justify-between">
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl mb-2">
+                {project.title}
+              </h1>
+              <Button variant={"outline"} onClick={() => router.back()}>
+                <ArrowLeft />
+                Back
+              </Button>
+            </div>
+            <p className="text-muted-foreground mb-8">{project.category}</p>
 
             <ProjectGallery images={project.images} />
 
             <div className="my-12">
               <h2 className="text-2xl font-bold mb-4">About this project</h2>
               <div className="prose prose-blue dark:prose-invert max-w-none text-foreground/90">
-                {project.longDescription.split('\n').map((paragraph, index) => (
+                {project.longDescription.split("\n").map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
@@ -67,14 +87,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             <div className="flex gap-4">
               <Button asChild>
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="mr-2 h-4 w-4" />
                   View on GitHub
                 </a>
               </Button>
               {project.liveUrl && (
                 <Button asChild variant="outline">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </a>

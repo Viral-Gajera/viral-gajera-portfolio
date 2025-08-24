@@ -21,6 +21,12 @@ import { cn } from '@/lib/utils';
 export default function ProjectGallery({ images }: { images: string[] }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  function carouselImages(){
+    const index = images.findIndex(img => img === selectedImage);
+    const adjustedImages = [...images.slice(index), ...images.slice(0, index)];
+    return adjustedImages;
+  }
+
   return (
     <div>
       <div className="overflow-hidden rounded-lg border">
@@ -66,7 +72,7 @@ export default function ProjectGallery({ images }: { images: string[] }) {
               className="w-full"
             >
               <CarouselContent>
-                {images.map((image, index) => (
+                {carouselImages().map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="aspect-video w-full flex items-center justify-center">
                        <Image
