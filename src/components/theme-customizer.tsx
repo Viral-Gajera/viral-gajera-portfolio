@@ -51,7 +51,7 @@ const defaultTheme: Theme = {
   '--secondary-foreground': '222.2 47.4% 11.2%',
   '--muted': '210 40% 96.1%',
   '--muted-foreground': '215.4 16.3% 46.9%',
-  '--accent': '283 11% 63%',
+  '--accent': '211 98% 73%',
   '--accent-foreground': '0 0% 100%',
   '--accent-dark': '215 28% 17%',
   '--destructive': '0 84.2% 60.2%',
