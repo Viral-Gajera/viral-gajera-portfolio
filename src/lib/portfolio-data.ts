@@ -291,6 +291,7 @@ export const education: Education[] = [
 export const skills = {
   "Frameworks & Libraries": [
     { name: "React.js & Next.js", level: 95 },
+    { name: "Redux & Redux Toolkit", level: 95 },
     { name: "Node.js & Express", level: 90 },
     { name: "Tailwind CSS", level: 95 },
     { name: "Angular (Basic)", level: 80 },
@@ -306,8 +307,8 @@ export const skills = {
     { name: "MongoDB", level: 75 },
   ],
   "DevOps & Cloud Platform": [
+    { name: "Microsoft Azure", level: 80 },
     { name: "Docker", level: 80 },
-    { name: "Google Cloud Platform", level: 70 },
   ],
   Tools: [
     { name: "Git & GitHub", level: 95 },

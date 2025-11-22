@@ -4,6 +4,9 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.png',
+  },
   title: 'Viral Gajera | Software Engineer',
   description: 'Portfolio of Viral Gajera, a Full Stack Web Developer specializing in React, Node.js, and modern web technologies.',
 };
