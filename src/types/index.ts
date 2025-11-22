@@ -9,6 +9,7 @@ export type PersonalData = {
   email: string;
   phone: string;
   location: string;
+  profilePicture: string;
   links: {
     label: string;
     href: string;

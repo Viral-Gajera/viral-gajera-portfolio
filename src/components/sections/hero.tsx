@@ -54,7 +54,7 @@ export function HeroSection() {
         <div className="order-1 flex items-center justify-center md:justify-end md:order-2">
           <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-foreground/20 shadow-lg md:h-80 md:w-80 bg-primary">
             <Image
-              src="/profile-picture-without-bg.png"
+              src={personalData.profilePicture}
               alt={personalData.name}
               fill
               className="object-cover "

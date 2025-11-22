@@ -39,6 +39,7 @@ export const personalData: PersonalData = {
   email: "viral.gajera218@gmail.com",
   phone: "+91 9714040515",
   location: "Rajkot, Gujarat, India",
+  profilePicture: "/profile-picture-2.jpeg",
   links: [
     {
       label: "LinkedIn",
