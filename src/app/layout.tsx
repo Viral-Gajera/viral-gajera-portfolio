@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
-import { cn } from "@/lib/utils";\
-import { StructuredData } from "@/components/structured-data";\
+import { cn } from "@/lib/utils";
+import { StructuredData } from "@/components/structured-data";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
