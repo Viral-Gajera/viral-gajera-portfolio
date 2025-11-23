@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import Script from "next/script";
-import { StructuredData } from "@/components/structured-data";
+import { cn } from "@/lib/utils";\
+import { StructuredData } from "@/components/structured-data";\
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://viral-gajera.vercel.app"),
@@ -105,6 +105,7 @@ export default function RootLayout({
         <StructuredData />
         {children}
         <Toaster />
+        <GoogleAnalytics gaId="G-F817WT42VZ" />
       </body>
     </html>
   );
