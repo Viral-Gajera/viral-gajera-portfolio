@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Add after Google Search Console setup
+    google: "KkmnV5w32gwPsjHA9TNWyNLQfyjbLIyIqexi-urnTPo", // Add after Google Search Console setup
   },
 };
 
@@ -99,6 +99,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        <meta name="google-site-verification" content="KkmnV5w32gwPsjHA9TNWyNLQfyjbLIyIqexi-urnTPo" />
       </head>
       <body className={cn("font-body antialiased")}>
         <StructuredData />

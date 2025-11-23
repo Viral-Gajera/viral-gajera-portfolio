@@ -55,7 +55,7 @@ export function HeroSection() {
           <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-foreground/20 shadow-lg md:h-80 md:w-80 bg-primary">
             <Image
               src={personalData.profilePicture}
-              alt={personalData.name}
+              alt={`${personalData.name} - ${personalData.title}`}
               fill
               className="object-cover "
               priority
