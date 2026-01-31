@@ -334,11 +334,18 @@ export const achievements: Achievement[] = [
 
 export const certifications: Certification[] = [
   {
-    title: "Azure Fundamental",
+    title: "Azure Fundamental (AZ-900)",
     issuer: "Microsoft Certified",
-    verificationUrl: "https://www.credly.com/badges/your-badge-id",
+    verificationUrl: "https://learn.microsoft.com/api/credentials/share/en-us/viralpatel-4559/1B2B4C80E551F312?sharingId=966DF490D90E60CD",
     imageUrl:
       "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/azure_fundamental.jpeg?raw=true",
+  },
+  {
+    title: "Github Action (GH-200)",
+    issuer: "Microsoft Certified",
+    verificationUrl: "https://learn.microsoft.com/api/credentials/share/en-us/ViralGajera-7568/EE108039AE39D182?sharingId=3EC1E760DF459441",
+    imageUrl:
+      "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/gh-200_github_actions.png?raw=true",
   },
   {
     title: "Database Programming with SQL",
