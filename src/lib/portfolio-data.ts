@@ -185,7 +185,12 @@ export const projects: Project[] = [
   {
     slug: "glucosesense",
     title: "GlucoSense",
-    category: ["Personal Project", "Web Application", "Mobile Application", "Ai/ML Project"],
+    category: [
+      "Personal Project",
+      "Web Application",
+      "Mobile Application",
+      "Ai/ML Project",
+    ],
     shortDescription:
       "A non-invasive glucose monitoring system using machine learning to analyze PPG signals.",
     techStack: [
@@ -215,19 +220,37 @@ export const projects: Project[] = [
     slug: "step-campus",
     title: "Step Campus",
     category: ["Mini Project", "Web Application"],
-    shortDescription: "A platform designed to help you master web automation with hands-on practice.",
+    shortDescription:
+      "A platform designed to help you master web automation with hands-on practice.",
     techStack: ["Next.js", "React", "TailwindCss", "ShadCn Ui"],
     githubUrl: "https://github.com/Viral-Gajera/step-campus",
     liveUrl: "https://step-campus.vercel.app/",
     images: [
-            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/1.png",
-            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/2.png",
-            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/3.png",
-            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/4.png",
-            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/5.png",
-            "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/6.png"
-          ],
-    longDescription: "Step Campus is a platform designed to help you master web automation with hands-on practice. It provides a rich set of UI components specifically created for testing and perfecting your Selenium scripts.\n\nKey Features:\n\n- Hands-on practice with real UI components\n- Rich set of diverse UI elements for comprehensive testing\n- Ideal for testing and perfecting your Selenium scripts"
+      "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/1.png",
+      "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/2.png",
+      "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/3.png",
+      "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/4.png",
+      "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/5.png",
+      "https://github.com/Viral-Gajera/step-campus/raw/main/tmp/images/6.png",
+    ],
+    longDescription:
+      "Step Campus is a platform designed to help you master web automation with hands-on practice. It provides a rich set of UI components specifically created for testing and perfecting your Selenium scripts.\n\nKey Features:\n\n- Hands-on practice with real UI components\n- Rich set of diverse UI elements for comprehensive testing\n- Ideal for testing and perfecting your Selenium scripts",
+  },
+  {
+    slug: "bookmyshow-clone",
+    title: "Book My Show",
+    category: ["Mini Project", "Web Application"],
+    shortDescription:
+      "A responsive frontend clone of the popular movie ticket booking website, BookMyShow.",
+    techStack: ["React.js", "TailwindCSS", "TMDB API for Movies"],
+    githubUrl: "https://github.com/Viral-Gajera/book-my-show-front-end-clone",
+    liveUrl: "https://book-my-show-front-end-clone.vercel.app/",
+    images: [
+      "https://github.com/Viral-Gajera/book-my-show-front-end-clone/raw/master/images-for-readme/Screenshot%202023-01-29%20003811.png?raw=true",
+      "https://github.com/Viral-Gajera/book-my-show-front-end-clone/raw/master/images-for-readme/Screenshot%202023-01-29%20003858.png?raw=true",
+      "https://github.com/Viral-Gajera/book-my-show-front-end-clone/raw/master/images-for-readme/Screenshot%202023-01-29%20003945.png?raw=true",
+    ],
+    longDescription: `This project is a detailed frontend implementation of the BookMyShow website. It focuses on replicating the user interface and user experience of browsing movies, viewing details, and the seat selection process. Built with React.js and styled with TailwindCSS, the project consumes a mock movie data API to dynamically render content. It demonstrates strong skills in component-based architecture and responsive design.`,
   },
   {
     slug: "tasky-app",
@@ -242,17 +265,6 @@ export const projects: Project[] = [
       "https://placehold.co/1200x800.png",
     ],
     longDescription: `Tasky is a full-stack MERN application that provides a clean and intuitive interface for task management. Users can create, update, delete, and categorize tasks. The application features a persistent backend built with Node.js and Express, connected to a MongoDB database to store user data. The frontend is built with React.js and styled with TailwindCSS for a responsive and modern design.`,
-  },
-  {
-    slug: "bookmyshow-clone",
-    title: "BookMyShow Frontend",
-    category: ["Mini Project", "Web Application"],
-    shortDescription:
-      "A responsive frontend clone of the popular movie ticket booking website, BookMyShow.",
-    techStack: ["React.js", "TailwindCSS", "API Integration"],
-    githubUrl: "https://github.com/Viral-Gajera",
-    images: ["https://placehold.co/1200x800.png"],
-    longDescription: `This project is a detailed frontend implementation of the BookMyShow website. It focuses on replicating the user interface and user experience of browsing movies, viewing details, and the seat selection process. Built with React.js and styled with TailwindCSS, the project consumes a mock movie data API to dynamically render content. It demonstrates strong skills in component-based architecture and responsive design.`,
   },
   {
     slug: "freelance-crm",
@@ -336,14 +348,16 @@ export const certifications: Certification[] = [
   {
     title: "Azure Fundamental (AZ-900)",
     issuer: "Microsoft Certified",
-    verificationUrl: "https://learn.microsoft.com/api/credentials/share/en-us/viralpatel-4559/1B2B4C80E551F312?sharingId=966DF490D90E60CD",
+    verificationUrl:
+      "https://learn.microsoft.com/api/credentials/share/en-us/viralpatel-4559/1B2B4C80E551F312?sharingId=966DF490D90E60CD",
     imageUrl:
       "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/azure_fundamental.jpeg?raw=true",
   },
   {
     title: "Github Action (GH-200)",
     issuer: "Microsoft Certified",
-    verificationUrl: "https://learn.microsoft.com/api/credentials/share/en-us/ViralGajera-7568/EE108039AE39D182?sharingId=3EC1E760DF459441",
+    verificationUrl:
+      "https://learn.microsoft.com/api/credentials/share/en-us/ViralGajera-7568/EE108039AE39D182?sharingId=3EC1E760DF459441",
     imageUrl:
       "https://github.com/Viral-Gajera/Viral-Gajera/blob/main/certificates/gh-200_github_actions.png?raw=true",
   },
