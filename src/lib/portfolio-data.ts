@@ -261,8 +261,10 @@ export const projects: Project[] = [
     techStack: ["React.js", "Node.js", "Express", "MongoDB", "TailwindCSS"],
     githubUrl: "https://github.com/Viral-Gajera",
     images: [
-      "https://placehold.co/1200x800.png",
-      "https://placehold.co/1200x800.png",
+      "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222137.png?raw=true",
+      "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222012.png?raw=true",
+      "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222153.png?raw=true",
+      "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222002.png?raw=true"
     ],
     longDescription: `Tasky is a full-stack MERN application that provides a clean and intuitive interface for task management. Users can create, update, delete, and categorize tasks. The application features a persistent backend built with Node.js and Express, connected to a MongoDB database to store user data. The frontend is built with React.js and styled with TailwindCSS for a responsive and modern design.`,
   },
