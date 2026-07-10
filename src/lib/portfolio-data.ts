@@ -259,7 +259,7 @@ export const projects: Project[] = [
     shortDescription:
       "A modern task management application to organize and track daily tasks and to-dos.",
     techStack: ["React.js", "Node.js", "Express", "MongoDB", "TailwindCSS"],
-    githubUrl: "https://github.com/Viral-Gajera",
+    githubUrl: "https://github.com/Viral-Gajera/Tasky-app",
     images: [
       "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222137.png?raw=true",
       "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222012.png?raw=true",
@@ -267,17 +267,6 @@ export const projects: Project[] = [
       "https://github.com/Viral-Gajera/Tasky-app/blob/master/images/Screenshot%202023-01-28%20222002.png?raw=true"
     ],
     longDescription: `Tasky is a full-stack MERN application that provides a clean and intuitive interface for task management. Users can create, update, delete, and categorize tasks. The application features a persistent backend built with Node.js and Express, connected to a MongoDB database to store user data. The frontend is built with React.js and styled with TailwindCSS for a responsive and modern design.`,
-  },
-  {
-    slug: "freelance-crm",
-    title: "Business CRM",
-    category: ["Freelance Project", "Web Application"],
-    shortDescription:
-      "A custom CRM solution for a local business to manage customer relationships and sales pipelines.",
-    techStack: ["Next.js", "Typescript", "TailwindCSS", "Firebase"],
-    githubUrl: "https://github.com/Viral-Gajera",
-    images: ["https://placehold.co/1200x800.png"],
-    longDescription: `This was a freelance project to build a custom Customer Relationship Management (CRM) system. The client needed a tailored solution to track leads, manage contacts, and visualize their sales funnel. The application is built with Next.js for a fast and SEO-friendly experience, with data stored in Firebase Firestore. It includes features like contact management, deal tracking, and a dashboard with key metrics.`,
   },
 ];
 
