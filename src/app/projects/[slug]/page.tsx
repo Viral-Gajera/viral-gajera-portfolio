@@ -1,53 +1,42 @@
-"use client";
-
 import { notFound } from "next/navigation";
-import { projects } from "@/lib/portfolio-data";
+import type { Metadata } from "next";
+import { getProjects } from "@/lib/projects/loader";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, ArrowLeft } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import ProjectGallery from "./project-gallery";
-import { useRouter } from "next/navigation";
-import { use, useEffect } from "react";
+import BackButton from "./back-button";
 
 type PageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
+  params: Promise<{ slug: string }>;
 };
 
-export default function ProjectPage({ params }: PageProps) {
-  const router = useRouter();
-  const { slug } = use(params);
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const projects = await getProjects();
   const project = projects.find((p) => p.slug === slug);
+  if (!project) return {};
+  return {
+    title: project.title,
+    description: project.shortDescription,
+  };
+}
 
-  useEffect(() => {
-    if (project) {
-      document.title = `${project.title} | Project Details`;
-
-      const metaDescription = document.querySelector(
-        "meta[name='description']"
-      );
-      if (metaDescription) {
-        metaDescription.setAttribute("content", project.shortDescription);
-      } else {
-        const meta = document.createElement("meta");
-        meta.name = "description";
-        meta.content = project.shortDescription;
-        document.head.appendChild(meta);
-      }
-    } else {
-      document.title = "Project Not Found";
-    }
-  }, [project]);
+export default async function ProjectPage({ params }: PageProps) {
+  const { slug } = await params;
+  const projects = await getProjects();
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
   return (
-    <div className="flex min`-h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16 sm:py-24">
@@ -56,18 +45,15 @@ export default function ProjectPage({ params }: PageProps) {
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
                 {project.title}
               </h1>
-              <Button variant={"outline"} onClick={() => router.back()}>
-                <ArrowLeft />
-                Back
-              </Button>
+              <BackButton />
             </div>
-             <div className="flex flex-wrap gap-2 mb-8">
-                {project.category.map((cat) => (
-                  <Badge key={cat} variant="default" className="text-sm">
-                    {cat}
-                  </Badge>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {project.category.map((cat) => (
+                <Badge key={cat} variant="default" className="text-sm">
+                  {cat}
+                </Badge>
+              ))}
+            </div>
 
             <ProjectGallery images={project.images} />
 

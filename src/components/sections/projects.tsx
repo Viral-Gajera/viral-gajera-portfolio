@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { projects, sectionIcons } from "@/lib/portfolio-data";
+import { sectionIcons } from "@/lib/portfolio-data";
 import { SectionWrapper } from "@/components/section-wrapper";
 import {
   Card,
@@ -25,12 +25,47 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-const allCategories: ProjectCategory[] = Array.from(
-  new Set(projects.flatMap((p) => p.category))
-) as ProjectCategory[];
+import { projects as staticProjects } from "@/lib/portfolio-data";
 
 export function ProjectsSection() {
+  const [projects, setProjects] = useState<Project[]>(staticProjects);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function loadProjects() {
+      try {
+        const response = await fetch("/api/projects");
+        if (!response.ok) throw new Error("Failed to fetch projects");
+        const data = (await response.json()) as {
+          projects?: Project[];
+        };
+        if (
+          mounted &&
+          Array.isArray(data.projects) &&
+          data.projects.length > 0
+        ) {
+          setProjects(data.projects);
+        }
+      } catch {
+        // Keep static fallback from portfolio-data on failure.
+      } finally {
+        if (mounted) setIsLoading(false);
+      }
+    }
+
+    loadProjects();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const allCategories: ProjectCategory[] = Array.from(
+    new Set(projects.flatMap((p) => p.category)),
+  ) as ProjectCategory[];
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<
     ProjectCategory | "all"
@@ -39,7 +74,7 @@ export function ProjectsSection() {
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
   const filteredProjects = useMemo(() => {
-    let filtered = projects;
+    let filtered = [...projects];
 
     if (searchQuery) {
       const lowercasedQuery = searchQuery.toLowerCase();
@@ -48,19 +83,19 @@ export function ProjectsSection() {
           project.title.toLowerCase().includes(lowercasedQuery) ||
           project.shortDescription.toLowerCase().includes(lowercasedQuery) ||
           project.techStack.some((tech) =>
-            tech.toLowerCase().includes(lowercasedQuery)
-          )
+            tech.toLowerCase().includes(lowercasedQuery),
+          ),
       );
     }
 
     if (selectedCategory !== "all") {
       filtered = filtered.filter((project) =>
-        project.category.includes(selectedCategory)
+        project.category.includes(selectedCategory),
       );
     }
 
     return filtered;
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, projects]);
 
   const paginatedProjects = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -115,6 +150,11 @@ export function ProjectsSection() {
           transition={{ duration: 0.3 }}
           className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
+          {isLoading && (
+            <p className="text-muted-foreground md:col-span-2 lg:col-span-3 text-center">
+              Loading projects...
+            </p>
+          )}
           {paginatedProjects.length > 0 ? (
             paginatedProjects.map((project) => (
               <Card
